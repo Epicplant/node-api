@@ -1,0 +1,46 @@
+<!--
+Christopher Roy
+05/18/2020
+Section AK: Austin Jenchi
+
+The contents of the webpage hosted at localhost:8000 which maintains the strucutre of the
+game blackjack that can be found at said local server. The html page maintains
+multiple hidden sections and alternates through them to simulate gamestates.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BlackJack</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <main>
+      <section id="start-menu">
+        <h1>BlackJack</h1>
+        <input id="name" type="text" placeholder="Please put your name here">
+        <button id="start-game">Play Game</button>
+        <!--http://acbl.mybigcommerce.com/52-playing-cards/
+            https://i.pinimg.com/736x/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.jpg-->
+        <img src="Images/png/2D.png" alt="A 2 of Diamonds">
+      </section>
+      <section id="bet-menu" class="hidden">
+        <h1>Make a bet</h1>
+        <p>Current Funds: $<span id="current-funds">500</span></p>
+        <input id="bet" type="number" value="10" placeholder="Place bet here" min="0">
+        <button id="begin-dealing">Begin Dealing</button>
+      </section>
+      <section id="game-menu" class="hidden">
+        <article id="cards"></article>
+        <article id="dealer"></article>
+        <article id="task-bar">
+          <button id="draw">Hit</button>
+          <button id="end">Use Cards</button>
+        </article>
+      </section>
+      <section id="end-game"  class="hidden">
+        <button id="return">Return to Start</button>
+      </section>
+    </main>
+  </body>
+</html>
